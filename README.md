@@ -1,2 +1,3 @@
 # Link-manager
-Web donde puedes almacenar y gestionar tus links a páginas favoritas 
+
+A web application for saving and managing links to your favorite web pages.
