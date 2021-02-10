@@ -14,5 +14,8 @@
     "sass"
   ],
   "author": "Leonardo Rincon \"jleobotache@gmail.com\"",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
