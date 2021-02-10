@@ -1,0 +1,18 @@
+{
+  "name": "link-manager",
+  "version": "1.0.0",
+  "description": "Wep para gestionar links ",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm",
+    "Javascript",
+    "node",
+    "html",
+    "sass"
+  ],
+  "author": "Leonardo Rincon \"jleobotache@gmail.com\"",
+  "license": "MIT"
+}
