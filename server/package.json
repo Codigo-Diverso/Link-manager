@@ -2,10 +2,13 @@
   "name": "server",
   "version": "1.0.0",
   "description": "Backend for Link-manager",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Carlos Alfaro <hello@carlosalfaro.dev> (https://www.carlosalfaro.dev/)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
