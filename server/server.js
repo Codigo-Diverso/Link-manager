@@ -1,7 +1,4 @@
-const path = require("path");
-require("dotenv").config({
-  path: path.resolve("./server/config/config.env"),
-});
+const dotenv = require("dotenv").config();
 const express = require("express");
 const app = express();
 
