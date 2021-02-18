@@ -1,3 +1,5 @@
+const WebLink = require("../models/WebLink");
+
 // @desc    Get all web-links
 // @route   GET /api/v1/web-links
 // @access  Public
@@ -17,8 +19,19 @@ exports.getWebLink = (req, res, next) => {
 // @desc    Create new web-link
 // @route   POST /api/v1/web-links/:id
 // @access  Private
-exports.createWebLink = (req, res, next) => {
-  res.status(200).json({ success: true, msg: "Create new web-link" });
+exports.createWebLink = async (req, res, next) => {
+  try {
+    const webLink = await WebLink.create(req.body);
+
+    res.status(201).json({
+      success: true,
+      data: webLink,
+    });
+  } catch (err) {
+    res.status(400).json({
+      success: false,
+    });
+  }
 };
 
 // @desc    Update web-link
