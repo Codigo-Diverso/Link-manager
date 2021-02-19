@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const slugify = require("slugify");
 
 const WebLinkSchema = new mongoose.Schema({
   name: {
@@ -9,6 +10,7 @@ const WebLinkSchema = new mongoose.Schema({
     maxlength: [75, "Name can not be more than 75 characters"],
     slug: String,
   },
+  slug: String,
   website: {
     type: String,
     match: [
@@ -27,6 +29,12 @@ const WebLinkSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+});
+
+// Create weblink slug from the name
+WebLinkSchema.pre("save", function (next) {
+  this.slug = slugify(this.name, { lower: true });
+  next();
 });
 
 module.exports = mongoose.model("WebLink", WebLinkSchema);
