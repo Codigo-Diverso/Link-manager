@@ -1,3 +1,4 @@
+const ErrorResponse = require("../utils/errorResponse");
 const WebLink = require("../models/WebLink");
 
 // @desc    Get all web-links
@@ -12,7 +13,7 @@ exports.getWebLinks = async (req, res, next) => {
       data: webLinks,
     });
   } catch (error) {
-    res.status(400).json({ success: false });
+    next(error);
   }
 };
 
@@ -24,12 +25,14 @@ exports.getWebLink = async (req, res, next) => {
     const webLink = await WebLink.findById(req.params.id);
 
     if (!webLink) {
-      return res.status(400).json({ success: false });
+      return new ErrorResponse(
+        `Weblink not found with id of ${req.params.id}`,
+        404
+      );
     }
 
     res.status(200).json({ success: true, data: webLink });
   } catch (error) {
-    // res.status(400).json({ success: false });
     next(error);
   }
 };
@@ -46,9 +49,7 @@ exports.createWebLink = async (req, res, next) => {
       data: webLink,
     });
   } catch (error) {
-    res.status(400).json({
-      success: false,
-    });
+    next(error);
   }
 };
 
@@ -62,11 +63,14 @@ exports.updateWebLink = async (req, res, next) => {
       runValidators: true,
     });
     if (!webLink) {
-      return res.status(400).json({ success: false });
+      return new ErrorResponse(
+        `Weblink not found with id of ${req.params.id}`,
+        404
+      );
     }
     res.status(200).json({ success: true, data: webLink });
   } catch (error) {
-    res.status(400).json({ success: false });
+    next(error);
   }
 };
 
@@ -77,10 +81,13 @@ exports.deleteWebLink = async (req, res, next) => {
   try {
     const webLink = await WebLink.findByIdAndDelete(req.params.id);
     if (!webLink) {
-      return res.status(400).json({ success: false });
+      return new ErrorResponse(
+        `Weblink not found with id of ${req.params.id}`,
+        404
+      );
     }
     res.status(200).json({ success: true, data: {} });
   } catch (error) {
-    res.status(400).json({ success: false });
+    next(error);
   }
 };
