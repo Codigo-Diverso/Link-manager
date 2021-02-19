@@ -1,6 +1,9 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
+// Body parser
+app.use(express.json());
+
 const morgan = require("morgan");
 const colors = require("colors");
 const connectDB = require("./config/db");
