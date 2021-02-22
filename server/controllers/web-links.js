@@ -12,7 +12,7 @@ exports.getWebLinks = asyncHandler(async (req, res, next) => {
   const reqQuery = { ...req.query };
 
   // Fields to exclude
-  const removeFields = ["select", "sort"];
+  const removeFields = ["select", "sort", "page", "limit"];
 
   // Loop over removeFields and delete them from reqQuery
   removeFields.forEach((param) => delete reqQuery[param]);
@@ -41,11 +41,39 @@ exports.getWebLinks = asyncHandler(async (req, res, next) => {
     query = query.sort("-createdAt");
   }
 
+  // Pagination
+  const page = parseInt(req.query.page, 10) || 1;
+  const limit = parseInt(req.query.limit, 10) || 25;
+  const startIndex = (page - 1) * limit;
+  const endIndex = page * limit;
+  const total = await WebLink.countDocuments();
+
+  query = query.skip(startIndex).limit(limit);
+
   // Excecuting query
   const webLinks = await query;
+
+  // Pagination result
+  const pagination = {};
+
+  if (endIndex < total) {
+    pagination.next = {
+      page: page + 1,
+      limit,
+    };
+  }
+
+  if (startIndex > 0) {
+    pagination.prev = {
+      page: page - 1,
+      limit,
+    };
+  }
+
   res.status(200).json({
     success: true,
     count: webLinks.length,
+    pagination,
     data: webLinks,
   });
 });
