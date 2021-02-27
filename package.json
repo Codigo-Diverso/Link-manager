@@ -6,7 +6,8 @@
   "scripts": {
     "start": "NODE_ENV=production node server/server.js",
     "dev": "nodemon server/server.js",
-    "build": "postcss client/css/tailwind.css -o client/public/css/style.css"
+    "build": "postcss client/css/tailwind.css -o client/public/css/style.css",
+    "watch": "postcss client/css/tailwind.css -o client/public/css/style.css --watch"
 
   },
   "keywords": [
