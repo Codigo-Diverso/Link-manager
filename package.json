@@ -5,24 +5,29 @@
   "main": "src/index.js",
   "scripts": {
     "start": "NODE_ENV=production node server/server.js",
-    "dev": "nodemon server/server.js"
+    "dev": "nodemon server/server.js",
+    "build": "postcss client/css/tailwind.css -o client/public/css/style.css"
+
   },
   "keywords": [
     "npm",
     "Javascript",
     "node",
     "html",
-    "sass"
+    "tailwindcss"
   ],
   "author": "Leonardo Rincon \"jleobotache@gmail.com\"",
   "license": "MIT",
   "dependencies": {
+    "autoprefixer": "^10.2.4",
     "colors": "^1.4.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.11.16",
     "morgan": "^1.10.0",
-    "slugify": "^1.4.6"
+    "postcss-cli": "^8.3.1",
+    "slugify": "^1.4.6",
+    "tailwindcss": "^2.0.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
