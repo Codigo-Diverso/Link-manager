@@ -1,3 +1,3 @@
 # Backend API for Link-manager
 
-run `npm start` to start the server.
+run `npm run dev` to start the development server.

@@ -1,0 +1,39 @@
+[
+  {
+    "tags": ["Web Development", "UI/UX", "Business"],
+    "name": "Devworks Bootcamp",
+    "website": "https://devworks.com",
+    "description": "Devworks is a full stack JavaScript Bootcamp located in the heart of Boston that focuses on the technologies you need to get a high paying job as a web developer"
+  },
+  {
+    "tags": ["Web Development", "UI/UX", "Backend"],
+    "name": "Udemy Course",
+    "website": "https://udemy.com",
+    "description": "Cool Udemy course for learning more stuff"
+  },
+  {
+    "tags": ["Web Development", "UI/UX", "Backend", "ReactJS"],
+    "name": "Tio Mircha",
+    "website": "https://www.youtube.com/user/bextlancom",
+    "description": "Tio Mircha siempre al rescate"
+  },
+  {
+    "tags": ["Web Development", "UI/UX", "Backend", "ReactJS", "Finanzas"],
+    "name": "Platzi",
+    "website": "https://platzi.com",
+    "description": "La mejor plataforma de aprendizaje en el universo"
+  },
+  {
+    "tags": [
+      "Web Development",
+      "UI/UX",
+      "Backend",
+      "ReactJS",
+      "Finanzas",
+      "Podcast"
+    ],
+    "name": "Spotify Podcast",
+    "website": "https://spotify.com",
+    "description": "Mis Podcast favoritos"
+  }
+]
