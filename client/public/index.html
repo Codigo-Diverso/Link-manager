@@ -9,31 +9,44 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-  <header>
-    <nav>
-      <figure>
-        <img class="w-16 h-16" src="../src/assets/icon/Logo.svg" alt="Logo de link manager">
-      </figure>
-      <ul class="nav__navbar">
-        <li class="navbar__items"><a href="">
-            <span>home</span>
-          </a></li>
-        <li class="navbar__items"><a href="">
-            <span>link</span>
-          </a></li>
-        <li class="navbar__items"><a href="">
-            <span>categorias</span>
-          </a></li>
-        <li class="navbar__items"><a href="">
-            <span>user</span>
-          </a></li>
-        <li class="navbar__items"><a href="">
-            <span>Configuraciones</span>
-          </a></li>
+<body class="grid grid-cols-6">
+  <header class="w-16 h-screen col-start-1 col-end-2 border-r border-dotted  border-green-300 flex flex-col">
+    <figure class="">
+      <img class="w-16 h-16" src="../src/assets/icon/Logo.svg" alt="Logo de link manager">
+    </figure>
+    <nav class="flex justify-center mt-6">
+      <ul class="nav__navbar ">
+        <li class="navbar__items w-8 h-8 ">
+          <figure>
+            <img src="../src/assets/icon/home-users.svg" alt="Icon home">
+          </figure>
+        </li>
+        <li class="navbar__items w-8 h-8 ">
+          <figure>
+            <img class="w-8 h-8" src="../src/assets/icon/icon-links.svg" alt="Icon home">
+          </figure>
+        </li>
+        <li class="navbar__items w-8 h-8 ">
+          <figure>
+            <img class="w-8 h-8" src="../src/assets/icon/icon-categoria.svg" alt="Icon home">
+          </figure>
+        </li>
+        <ul>
+          <li class="navbar__items w-8 h-8 ">
+            <figure>
+              <img class="w-8 h-8" src="../src/assets/icon/icon-user.svg" alt="Icon home">
+            </figure>
+          </li>
+          <li class="navbar__items w-8 h-8 ">
+            <figure>
+              <img class="w-8 h-8" src="../src/assets/icon/icon-settings.svg" alt="Icon home">
+            </figure>
+          </li>
+        </ul>
       </ul>
     </nav>
   </header>
+
   <main class="container">
     <section>
       <h3>Links recientes</h3>
