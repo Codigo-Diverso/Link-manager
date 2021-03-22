@@ -6,16 +6,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Link Manager</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/tailwind.css">
 </head>
 
-<body class="grid grid-cols-6">
+<body class="grid navbar__home">
   <header class="w-16 h-screen col-start-1 col-end-2 border-r border-dotted  border-green-300 flex flex-col">
-    <figure class="">
+    <a class="">
       <img class="w-16 h-16" src="../src/assets/icon/Logo.svg" alt="Logo de link manager">
-    </figure>
-    <nav class="flex justify-center mt-6">
-      <ul class="nav__navbar ">
+    </a>
+    <nav class="flex flex-wrap justify-center mt-6 h-full">
+      <ul class="nav__navbar h-5/6 ">
         <li class="navbar__items w-8 h-8 ">
           <figure>
             <img src="../src/assets/icon/home-users.svg" alt="Icon home">
@@ -31,32 +34,126 @@
             <img class="w-8 h-8" src="../src/assets/icon/icon-categoria.svg" alt="Icon home">
           </figure>
         </li>
-        <ul>
-          <li class="navbar__items w-8 h-8 ">
-            <figure>
-              <img class="w-8 h-8" src="../src/assets/icon/icon-user.svg" alt="Icon home">
-            </figure>
-          </li>
-          <li class="navbar__items w-8 h-8 ">
-            <figure>
-              <img class="w-8 h-8" src="../src/assets/icon/icon-settings.svg" alt="Icon home">
-            </figure>
-          </li>
-        </ul>
+      </ul>
+      <ul>
+        <li class="navbar__items w-8 h-8 ">
+          <figure>
+            <img class="w-8 h-8" src="../src/assets/icon/icon-user.svg" alt="Icon home">
+          </figure>
+        </li>
+        <li class="navbar__items w-8 h-8 ">
+          <figure>
+            <img class="w-8 h-8" src="../src/assets/icon/icon-settings.svg" alt="Icon home">
+          </figure>
+        </li>
       </ul>
     </nav>
   </header>
 
-  <main class="container">
-    <section>
-      <h3>Links recientes</h3>
+  <main class="h-screen home__container font-bold">
+    <h2 class="text-4xl  text-center mt-8 mb-8">Overiview</h2>
+    <section class="flex flex-wrap home__container--links">
+      <h3 class="text-lg ml-2">Recent Links</h3>
+
+      <div class=" w-screen flex flex-wrap justify-center mt-4  container__links--items">
+
+        <div class="link__item1 w-52 h-9 bg-white  flex justify-between items-center rounded-2xl mb-2.5">
+          <div class="links__title">
+            <h4 class="ml-4">Title</h4>
+          </div>
+          <div class="flex">
+            <a href="#">
+              <img class="mr-4 mt-1" src="../src/assets/icon/icon-arrow.svg" alt="icon para abrir link">
+            </a>
+            <a href="#">
+              <img class="mr-4" src="../src/assets/icon/icon-share.svg" alt="icon de compratir">
+            </a>
+          </div>
+        </div>
+
+        <div class="link__item2 w-52 h-9 bg-white  flex justify-between items-center rounded-2xl mb-2.5">
+          <div class="links__title">
+            <h4 class="ml-4">Title</h4>
+          </div>
+          <div class="flex">
+            <a href="#">
+              <img class="mr-4 mt-1" src="../src/assets/icon/icon-arrow.svg" alt="icon para abrir link">
+            </a>
+            <a href="#">
+              <img class="mr-4" src="../src/assets/icon/icon-share.svg" alt="icon de compratir">
+            </a>
+          </div>
+        </div>
+
+
+        <div class="link__item3 w-52 h-9 bg-white  flex justify-between items-center rounded-2xl mb-2.5">
+          <div class="links__title">
+            <h4 class="ml-4">Title</h4>
+          </div>
+          <div class="flex">
+            <a href="#">
+              <img class="mr-4 mt-1" src="../src/assets/icon/icon-arrow.svg" alt="icon para abrir link">
+            </a>
+            <a href="#">
+              <img class="mr-4" src="../src/assets/icon/icon-share.svg" alt="icon de compratir">
+            </a>
+          </div>
+        </div>
+
+
+      </div>
     </section>
-    <section>
-      <h3>Categorias</h3>
+    <section class="home__container--categories">
+      <h3 class="text-lg mb-4 ml-2">Categories</h3>
+
+      <div class=" flex flex-wrap justify-center container__categories--items">
+
+        <div class="categories__item1 w-24 h-24 bg-white  rounded-2xl mb-4 mr-3">
+          <div class="">
+            <a href="#">
+              <img class="mx-auto w-9 pt-4" src="../src/assets/icon/icon-categoria.svg" alt="icon para abrir link">
+          </div>
+          <div class="categories__title">
+            <h4 class="text-center text-sm">Categories</h4>
+          </div>
+        </div>
+
+        <div class="categories__item1 w-24 h-24 bg-white  rounded-2xl mb-4 mr-3">
+          <div class="">
+            <a href="#">
+              <img class="mx-auto w-9 pt-4" src="../src/assets/icon/icon-categoria.svg" alt="icon para abrir link">
+          </div>
+          <div class="categories__title">
+            <h4 class="text-center text-sm">Categories</h4>
+          </div>
+        </div>
+
+        <div class="categories__item1 w-24 h-24 bg-white  rounded-2xl  mr-3">
+          <div class="">
+            <a href="#">
+              <img class="mx-auto w-9 pt-4" src="../src/assets/icon/icon-categoria.svg" alt="icon para abrir link">
+          </div>
+          <div class="categories__title">
+            <h4 class="text-center text-sm">Categories</h4>
+          </div>
+        </div>
+
+        <div class="categories__item1 w-24 h-24 bg-white  rounded-2xl  mr-3">
+          <div class="">
+            <a href="#">
+              <img class="mx-auto w-9 pt-4" src="../src/assets/icon/icon-categoria.svg" alt="icon para abrir link">
+          </div>
+          <div class="categories__title">
+            <h4 class="text-center text-sm">Categories</h4>
+          </div>
+        </div>
+
+      </div>
+
     </section>
   </main>
   <section>
-    <div>add</div>
+    <div></div>
   </section>
 </body>
 

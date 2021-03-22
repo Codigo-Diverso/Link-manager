@@ -3,3 +3,25 @@
 @tailwind components;
 
 @tailwind utilities;
+
+:root {
+  --color-primary: #019c77;
+  --color-dark: #012117;
+  --font-roboto: "Roboto", sans-serif;
+}
+body {
+  background-color: #e5e5e5;
+}
+.home__container h2 {
+  font-family: var(--font-roboto);
+  color: var(--color-primary);
+}
+.home__container h3 {
+  color: var(--color-dark);
+}
+h4 {
+  color: var(--color-primary);
+}
+.navbar__home {
+  grid-template-columns: 68px 256px;
+}
