@@ -6,22 +6,27 @@
 
 :root {
   --color-primary: #019c77;
+  --color-claro: #fff2e9;
   --color-dark: #012117;
   --font-roboto: "Roboto", sans-serif;
 }
 body {
-  background-color: #e5e5e5;
-}
-.home__container h2 {
   font-family: var(--font-roboto);
-  color: var(--color-primary);
-}
-.home__container h3 {
-  color: var(--color-dark);
-}
-h4 {
-  color: var(--color-primary);
-}
-.navbar__home {
+  background-color: var(--color-dark);
   grid-template-columns: 68px 256px;
+}
+header {
+  border-right: 1px dotted var(--color-primary);
+}
+.link__item1,
+.link__item2,
+.link__item3,
+.categories__item1 {
+  background-color: var(--color-primary);
+}
+
+h2,
+h3,
+h4 {
+  color: var(--color-claro);
 }
