@@ -2,6 +2,33 @@
 
 @tailwind components;
 
+.container__recent--links {
+  @apply w-screen flex flex-wrap justify-center mt-4;
+}
+
+.link__item1,
+.link__item2,
+.link__item3 {
+  @apply w-52 h-9 flex justify-between items-center rounded-2xl mb-2.5;
+}
+
+.container__categories--items {
+  @apply flex flex-wrap justify-center;
+}
+
+.categories__item {
+  @apply w-24 h-24  rounded-2xl mr-3;
+}
+
+.cotegories--icons {
+  @apply mx-auto w-9 pt-4;
+}
+
+.navbar__items,
+.navbar--icons {
+  @apply w-8 h-8;
+}
+
 @tailwind utilities;
 
 :root {
@@ -21,7 +48,7 @@ header {
 .link__item1,
 .link__item2,
 .link__item3,
-.categories__item1 {
+.categories__item {
   background-color: var(--color-primary);
 }
 
