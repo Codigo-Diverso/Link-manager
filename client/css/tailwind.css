@@ -2,4 +2,58 @@
 
 @tailwind components;
 
+.container__recent--links {
+  @apply w-screen flex flex-wrap justify-center mt-4;
+}
+
+.link__item1,
+.link__item2,
+.link__item3 {
+  @apply w-52 h-9 flex justify-between items-center rounded-2xl mb-2.5;
+}
+
+.container__categories--items {
+  @apply flex flex-wrap justify-center;
+}
+
+.categories__item {
+  @apply w-24 h-24  rounded-2xl mr-3;
+}
+
+.cotegories--icons {
+  @apply mx-auto w-9 pt-4;
+}
+
+.navbar__items,
+.navbar--icons {
+  @apply w-8 h-8;
+}
+
 @tailwind utilities;
+
+:root {
+  --color-primary: #019c77;
+  --color-claro: #fff2e9;
+  --color-dark: #012117;
+  --font-roboto: "Roboto", sans-serif;
+}
+body {
+  font-family: var(--font-roboto);
+  background-color: var(--color-dark);
+  grid-template-columns: 68px 256px;
+}
+header {
+  border-right: 1px dotted var(--color-primary);
+}
+.link__item1,
+.link__item2,
+.link__item3,
+.categories__item {
+  background-color: var(--color-primary);
+}
+
+h2,
+h3,
+h4 {
+  color: var(--color-claro);
+}
